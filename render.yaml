@@ -1,8 +1,8 @@
 databases:
-  - name: django_portfolio_render_db
+  - name: django_portfolio_render
     region: singapore
     plan: free
-    databaseName: django_portfolio_render_db
+    databaseName: django_portfolio_render
     user: django_user
 
 services:
@@ -18,7 +18,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: django_render_db
+          name: django_portfolio_render
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
