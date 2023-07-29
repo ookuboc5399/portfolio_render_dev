@@ -27,6 +27,16 @@
         </p>
         <hr>
         <p>
+            <i class="fab fa-github mr-2"></i>
+            <span class="font-weight-bolder">サイトURL : </span>
+            {% if work_data.url_site %}
+                <a class="link-color" href="{{ work_data.url_site }}" target="_blank">Link</a>
+            {% else %}
+                Private
+            {% endif %}
+        </p>
+        <hr>
+        <p>
             <i class="far fa-calendar-alt mr-2"></i>
             <span class="font-weight-bolder">CREATED : </span>
             {{ work_data.created }}

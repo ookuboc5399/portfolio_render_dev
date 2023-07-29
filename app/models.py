@@ -23,7 +23,8 @@ class Work(models.Model):
     image = models.ImageField(upload_to='images', verbose_name='イメージ画像')
     thumbnail = models.ImageField(upload_to='images', verbose_name='サムネイル', null=True, blank=True)
     skill = models.CharField('スキル', max_length=100)
-    url = models.CharField('URL', max_length=100, null=True, blank=True)
+    url = models.CharField('GitHubURL', max_length=100, null=True, blank=True)
+    url_site = models.CharField('サイトURL', max_length=100, null=True, blank=True)
     created = models.DateField('作成日時')
     description = models.TextField('説明')
 
